@@ -10,20 +10,42 @@ namespace Ejercicio12
             //Programe un algoritmo que pida a usuario 2 números por pantalla y que muestre todos los números comprendidos entre ambos números incluyéndolos. 
 
             //Declaración de variables
+            bool retorno = false;
             int num1, num2, min, max, numero;
-            const string MESSAGE = "Por favor ingresar un número entero válido";
+            const string MESSAGE = "Por favor ingresar un número entero válido. Presione la tecla ENTER";
 
-            Console.Write("Ingrese el primer número: ");
-            if (!int.TryParse(Console.ReadLine(), out num1)) //9
+            do
             {
-                Console.WriteLine(MESSAGE);
+                Console.Clear();
+                Console.Write("Ingrese el primer número: ");
+                if (!int.TryParse(Console.ReadLine(), out num1)) //9
+                {
+                    Console.WriteLine(MESSAGE);
+                    retorno = true;
+                    Console.ReadKey();
+                }
+                else
+                {
+                    retorno = false;
+                }
             }
+            while (retorno);
 
-            Console.Write("Ingrese el segundo número: ");
-            if (!int.TryParse(Console.ReadLine(), out num2)) //2
+
+            do
             {
-                Console.WriteLine(MESSAGE);
+                Console.Write("Ingrese el segundo número: ");
+                if (!int.TryParse(Console.ReadLine(), out num2)) //9
+                {
+                    Console.WriteLine(MESSAGE);
+                    retorno = true;
+                }
+                else
+                {
+                    retorno = false;
+                }
             }
+            while (retorno);
 
             //Proceso
             min = Math.Min(num1, num2);
