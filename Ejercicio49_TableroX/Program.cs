@@ -44,6 +44,18 @@ namespace Ejercicio49_TableroX
                     case ConsoleKey.DownArrow:
                         MoveO("abajo");
                         break;
+                    case ConsoleKey.D:
+                        MoveO("derecha");
+                        break;
+                    case ConsoleKey.A:
+                        MoveO("izquierda");
+                        break;
+                    case ConsoleKey.W:
+                        MoveO("arriba");
+                        break;
+                    case ConsoleKey.S:
+                        MoveO("abajo");
+                        break;
                     case ConsoleKey.Escape:
                         escKeyPressed = true;
                         break;
